@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eeede8">
+  <title>Hồ sơ khai phá · Stellar Journal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/ui.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" defer></script>
+  <script src="js/quiz.js" defer></script>
+</head>
+<body id="top">
+  <div class="page-frame" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Stellar Journal, trang chủ"><span class="brand-mark"><i></i><i></i><i></i><i></i></span><span><strong>STELLAR JOURNAL</strong><small>Honkai: Star Rail</small></span></a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false"><morph-icon id="nav-icon" icon="M4 6h16M4 12h16M4 18h16" label="Menu"></morph-icon></button>
+      <nav class="main-nav" id="main-nav" aria-label="Điều hướng chính"><a href="#intro-card">Giới thiệu</a><a href="#start-quiz">Bài đánh giá</a><a href="#group-members">Thành viên nhóm</a></nav>
+      <a class="header-cta" href="#start-quiz">Bắt đầu <morph-icon class="cta-arrow" icon="M5 12h14M12 5l7 7-7 7" label="Bắt đầu"></morph-icon></a>
+    </div>
+  </header>
+  <main class="quiz-main">
+    <section class="page-intro page-intro-centered" id="intro-card">
+      <p class="eyebrow">BÀI TẬP NHÓM <span>/</span> 12 CÂU HỎI</p>
+      <h1>Bạn hợp với<br><span class="highlight">vùng đất nào giữa các vì sao?</span></h1>
+      <p class="hero-copy">Chọn câu trả lời gần với bạn nhất. Cuối hành trình, bạn sẽ nhận hồ sơ kèm ảnh trong game và lời giải thích.</p>
+      <button class="hero-button" id="start-quiz" type="button">Bắt đầu hành trình <morph-icon class="cta-arrow" icon="M5 12h14M12 5l7 7-7 7" label="Bắt đầu"></morph-icon></button>
+      <div class="quiz-meta"><span>12 câu</span><span>4 vùng đất · kết quả cân bằng</span><span>Khoảng 3 phút</span></div>
+    </section>
+
+    <section class="question-card" id="question-card" hidden aria-labelledby="question-title">
+      <div class="question-top"><span class="question-counter" id="question-counter">CÂU 01 / 12</span><span class="answer-count" id="answer-count">0 câu đã chọn</span></div>
+      <div class="progress-track" aria-hidden="true"><span id="progress-fill"></span></div>
+      <div id="question-content"></div>
+      <div class="question-footer"><p id="selection-hint" role="status" aria-live="polite">Chọn một đáp án để tiếp tục.</p><button class="continue-button" id="continue-button" type="button" disabled>Tiếp tục <span>→</span></button></div>
+    </section>
+
+    <section class="result-card" id="result-card" hidden aria-labelledby="result-title">
+      <p class="eyebrow">HỒ SƠ ĐÃ SẴN SÀNG <span>/</span> KẾT QUẢ CỦA BẠN</p>
+      <img id="result-image" class="result-image" src="" alt="">
+      <div class="result-image-grid" id="result-image-grid" role="group" aria-label="Ảnh bốn vùng đất trong Honkai: Star Rail" hidden>
+        <img src="images/herta-space-station.jpg" alt="Trạm Không Gian Herta">
+        <img src="images/jarilo-vi.jpg" alt="Jarilo-VI">
+        <img src="images/xianzhou-luofu.jpg" alt="Xianzhou Luofu">
+        <img src="images/penacony.jpg" alt="Penacony">
+      </div>
+      <div class="result-copy"><p class="result-label" id="result-label"></p><h2 id="result-title"></h2><p id="result-description"></p><button class="button button-primary restart-button" id="restart-quiz" type="button">Làm lại bài đánh giá ↻</button></div>
+    </section>
+    <p class="quiz-note">Bài đánh giá mang tính giải trí và dựa trên lựa chọn của bạn.</p>
+    <footer class="site-footer quiz-footer" id="group-members"><a class="brand brand-footer" href="#top"><span class="brand-mark"><i></i><i></i><i></i><i></i></span><strong>STELLAR JOURNAL</strong></a><span class="team-credit">NHÓM: Trần Nguyễn Phi Vũ · MSSV 22050102<br>Phạm Hoàng Hùng · MSSV 22050033</span><span>HONKAI: STAR RAIL · BÀI TẬP NHÓM</span><span>12 CÂU / 4 KẾT QUẢ</span></footer>
+  </main>
+</body>
+</html>
